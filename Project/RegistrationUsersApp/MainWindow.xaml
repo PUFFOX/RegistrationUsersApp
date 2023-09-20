@@ -1,0 +1,31 @@
+﻿<Window x:Class="RegistrationUsersApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistrationUsersApp"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Застосунок для користувачів" Height="600" Width="800">
+    
+    <Grid Background="#ffdadada">
+        <Border MinWidth="400" MaxWidth="500" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="60" Color="LightGray" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Здоров, заєбав" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" />
+                <TextBlock x:Name="exampleText" Text="Hello There" FontWeight="Bold" Margin="0 0 0 20" />
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Left" Content="Регістрація" />
+                    <Button HorizontalAlignment="Right" Content="Войти" Style="{StaticResource MaterialDesignFlatButton}" />
+                </Grid>
+                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введіть логін" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <PasswordBox x:Name="passBoxPass" materialDesign:HintAssist.Hint="Введіть пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                <PasswordBox x:Name="passBoxPass2" materialDesign:HintAssist.Hint="Повторіть пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="Почта" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <Button Content="Зареєструватися" Margin="0 20" Click="btnRegUser_Click" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
